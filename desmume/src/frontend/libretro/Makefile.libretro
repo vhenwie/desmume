@@ -126,7 +126,6 @@ ifneq (,$(findstring unix,$(platform)))
 else ifeq ($(platform), classic_armv7_a7)
 	TARGET := $(TARGET_NAME)_libretro.so
 	fpic := -fPIC
-    LIBS := -lpcap
     SHARED := -shared -Wl,--version-script=$(CORE_DIR)/frontend/libretro/link.T  -Wl,--no-undefined -fPIC
 	CFLAGS += -Ofast \
 	-flto=4 -fwhole-program -fuse-linker-plugin \
